@@ -20,6 +20,7 @@
         <module>10-hb-many-to-many</module>
         <module>11-web-customer-tracker</module>
         <module>12-spring-demo-aop</module>
+        <module>13-spring-demo-aop-pointcut-declorations</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>

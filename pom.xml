@@ -21,6 +21,9 @@
         <module>11-web-customer-tracker</module>
         <module>12-spring-demo-aop</module>
         <module>13-spring-demo-aop-pointcut-declorations</module>
+        <module>14-spring-demo-aop-pointcut-declarations-combo</module>
+        <module>15-spring-demo-aop-pointcut-order-aspects</module>
+        <module>16-spring-demo-aop-read-joinpoint</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>

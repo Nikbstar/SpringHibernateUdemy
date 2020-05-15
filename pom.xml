@@ -25,6 +25,10 @@
         <module>15-spring-demo-aop-pointcut-order-aspects</module>
         <module>16-spring-demo-aop-read-joinpoint</module>
         <module>17-spring-demo-aop-after-returning</module>
+        <module>18-spring-demo-aop-after-throwing</module>
+        <module>19-spring-demo-aop-after-finally</module>
+        <module>20-spring-demo-aop-around</module>
+        <module>21-spring-demo-aop-around-with-logger</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>

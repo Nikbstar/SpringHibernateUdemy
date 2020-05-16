@@ -29,6 +29,8 @@
         <module>19-spring-demo-aop-after-finally</module>
         <module>20-spring-demo-aop-around</module>
         <module>21-spring-demo-aop-around-with-logger</module>
+        <module>22-spring-demo-aop-around-handle-exception</module>
+        <module>23-web-customer-tracker-aop</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>

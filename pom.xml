@@ -31,6 +31,7 @@
         <module>21-spring-demo-aop-around-with-logger</module>
         <module>22-spring-demo-aop-around-handle-exception</module>
         <module>23-web-customer-tracker-aop</module>
+        <module>24-spring-security-demo</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>
@@ -40,12 +41,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.1.8.RELEASE</version>
+            <version>5.1.9.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.1.8.RELEASE</version>
+            <version>5.1.9.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -92,12 +93,22 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>5.1.8.RELEASE</version>
+            <version>5.1.9.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.1.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.1.6.RELEASE</version>
         </dependency>
     </dependencies>
     <build>

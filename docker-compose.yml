@@ -1,0 +1,20 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always # перезапуск образа после падения
+    ports:
+      - 3306:3306 # пробрасывание порта с виртуалки
+    volumes:
+      - ./databases:/var/lib/mysql # в папке databases будет храниться база (её можно переносить)
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456 # пароль от рута
+
+  adminer:
+    image: adminer # phpMyAdmin http://127.0.0.1:6080/
+    restart: always
+    ports:
+      - 6080:8080

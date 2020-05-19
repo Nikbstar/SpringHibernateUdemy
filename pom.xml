@@ -32,6 +32,10 @@
         <module>22-spring-demo-aop-around-handle-exception</module>
         <module>23-web-customer-tracker-aop</module>
         <module>24-spring-security-demo</module>
+        <module>25-spring-security-demo-custom-login-form</module>
+        <module>26-spring-security-demo-logout</module>
+        <module>27-spring-security-demo-csrf</module>
+        <module>28-spring-security-demo-user-roles</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>
@@ -109,6 +113,18 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>5.1.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>5.1.6.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>

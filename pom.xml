@@ -36,6 +36,7 @@
         <module>26-spring-security-demo-logout</module>
         <module>27-spring-security-demo-csrf</module>
         <module>28-spring-security-demo-user-roles</module>
+        <module>29-spring-security-demo-JDBC-plaintext</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>

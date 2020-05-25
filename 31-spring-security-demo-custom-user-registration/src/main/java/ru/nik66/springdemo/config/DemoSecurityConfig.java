@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import ru.nik66.springdemo.service.UserService;
 
 import javax.sql.DataSource;
 
@@ -17,6 +18,7 @@ import javax.sql.DataSource;
 public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private DataSource dataSource;
+    private UserService userService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -53,4 +55,8 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
         this.dataSource = dataSource;
     }
 
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 }

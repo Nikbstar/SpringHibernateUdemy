@@ -39,6 +39,7 @@
         <module>29-spring-security-demo-JDBC-plaintext</module>
         <module>30-spring-security-demo-JDBC-bcrypt</module>
         <module>31-spring-security-demo-custom-user-registration</module>
+        <module>32-spring-security-demo-crm</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>

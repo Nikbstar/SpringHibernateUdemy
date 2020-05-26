@@ -40,6 +40,7 @@
         <module>30-spring-security-demo-JDBC-bcrypt</module>
         <module>31-spring-security-demo-custom-user-registration</module>
         <module>32-spring-security-demo-crm</module>
+        <module>33-jackson-databind-json-demo</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>
@@ -136,6 +137,13 @@
             <artifactId>spring-tx</artifactId>
             <version>5.1.6.RELEASE</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

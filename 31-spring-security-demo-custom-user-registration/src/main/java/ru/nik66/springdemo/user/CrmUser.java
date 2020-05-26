@@ -30,6 +30,7 @@ public class CrmUser {
     @NotNull(message = "is required")
     @Size(min = 1, message = "is required")
     private String email;
+    private String role;
 
     public CrmUser() {
     }
@@ -81,4 +82,13 @@ public class CrmUser {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
 }

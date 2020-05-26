@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.nik66.springdemo.dao.RoleDao;
 import ru.nik66.springdemo.dao.UserDao;
 import ru.nik66.springdemo.entity.Role;
 import ru.nik66.springdemo.entity.User;
@@ -46,7 +47,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userDao.loadUserByUsername(s);
+        User user = userDao.findByUserName(s);
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }

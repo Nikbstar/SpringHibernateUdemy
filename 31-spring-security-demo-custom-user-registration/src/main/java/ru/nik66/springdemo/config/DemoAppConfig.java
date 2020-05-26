@@ -58,11 +58,15 @@ public class DemoAppConfig {
         return dataSource;
     }
 
+    private int getIntProperty(String propertyName) {
+        return Integer.parseInt(env.getProperty(propertyName));
+    }
+
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(securityDataSource());
-        sessionFactoryBean.setPackagesToScan(env.getProperty("hiberante.packagesToScan"));
+        sessionFactoryBean.setPackagesToScan(env.getProperty("hibernate.packagesToScan"));
         sessionFactoryBean.setHibernateProperties(getHibernateProperties());
         return sessionFactoryBean;
     }
@@ -81,10 +85,6 @@ public class DemoAppConfig {
         HibernateTransactionManager txManager = new HibernateTransactionManager();
         txManager.setSessionFactory(sessionFactory);
         return txManager;
-    }
-
-    private int getIntProperty(String propertyName) {
-        return Integer.parseInt(env.getProperty(propertyName));
     }
 
     @Autowired

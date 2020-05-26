@@ -11,18 +11,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import ru.nik66.springdemo.service.UserService;
 
-import javax.sql.DataSource;
-
 @Configuration
 @EnableWebSecurity
 public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private DataSource dataSource;
     private UserService userService;
+    private CustomAuthenticationSuccessHandler successHandler;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication().dataSource(dataSource);
+        auth.authenticationProvider(authenticationProvider());
     }
 
     @Override
@@ -32,7 +30,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/employees").hasRole("EMPLOYEE")
                     .antMatchers("/leaders/**").hasRole("MANAGER")
                     .antMatchers("/systems/**").hasRole("ADMIN")
-                .and().formLogin().loginPage("/showMyLoginPage").loginProcessingUrl("/authenticateTheUser").permitAll()
+                .and().formLogin().loginPage("/showMyLoginPage").loginProcessingUrl("/authenticateTheUser").successHandler(successHandler).permitAll()
                 .and().logout().permitAll()
                 .and().exceptionHandling().accessDeniedPage("/access-denied");
     }
@@ -51,12 +49,13 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
+
+    @Autowired
+    public void setSuccessHandler(CustomAuthenticationSuccessHandler successHandler) {
+        this.successHandler = successHandler;
+    }
+
 }
